@@ -1,4 +1,4 @@
-#在Android Studio 上顯示網路圖片
+# 在Android Studio 上顯示網路圖片
 
 #### 最終成果
 
@@ -13,12 +13,15 @@
 <img src="https://i.imgur.com/DdVVIn8.png" width="50%">
 
 網路使用權限
+
 `<uses-permission android:name="android.permission.INTERNET"></uses-permission>`
 
 ------------
 ### 2.加入ImageView UI元件
 <img src="https://i.imgur.com/yoBugf0.png" width="80%">
+
 #### XML
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -39,16 +42,20 @@
         tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
+
 ### 3.加入implementation 並同步
+
 <img src="https://i.imgur.com/7sKpOVe.png">
+
 #### 進入build.gradle(Module internetimg)並加入
+
 ```xml
 implementation "com.github.bumptech.glide:compose:1.0.0-beta01"
 ```
 
 ------------
 
-### 撰寫JAVA程式碼
+### 4.撰寫JAVA程式碼
 Glide用法
 `Glide.with(context).load(url).into(imageView);
 `
